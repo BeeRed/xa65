@@ -18,7 +18,7 @@ LDFLAGS = -lc
 #CFLAGS =
 #LD = ld
 
-DESTDIR = /usr/local
+DESTDIR ?= /usr/local
 
 BINDIR = $(DESTDIR)/bin
 MANDIR = $(DESTDIR)/share/man/man1
