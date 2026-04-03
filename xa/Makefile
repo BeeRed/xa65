@@ -3,9 +3,18 @@
 VERS = 2.4.1
 CC = gcc
 LD = gcc
+
 # for testing. not to be used; build failures in misc/.
 #CFLAGS = -O2 -W -Wall -pedantic -ansi -g
-CFLAGS = -O2 -g
+#CFLAGS  = -std=c18
+CFLAGS  = -std=gnu99
+CFLAGS  += -W
+CFLAGS  += -Wall
+CFLAGS  += -pedantic
+CFLAGS  += -Wmissing-prototypes
+#CFLAGS  += -ansi
+CFLAGS  += -O3
+CFLAGS  += -g
 LDFLAGS = -lc
 
 # for DOS?
