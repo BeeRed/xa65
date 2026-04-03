@@ -142,8 +142,10 @@ int write_options(FILE *fp, file65 *file);
 int write_reloc(file65 *fp[], int nfp, FILE *f);
 int write_globals(FILE *fp);
 int write_nglobals(FILE *fp, char **globdef, int nglobal);
-int find_global(unsigned char *name);
+int find_global(const char *name);
 int resolve_undef(file65 *file, int *remains);
+int find_file_global(unsigned char *bp, file65 *fp, int *seg);
+void usage(FILE *fp);
 
 file65 file;
 unsigned char cmp[] = { 1, 0, 'o', '6', '5' };
@@ -1238,7 +1240,7 @@ printf("set global label '%s' (l=%d, seg=%d, val=%04x)\n", gp[g].name,
 	return 0;
 }
 
-int find_global(unsigned char *name) {
+int find_global(const char *name) {
 	int i;
 	for (i = 0; i < g; i++) {
 

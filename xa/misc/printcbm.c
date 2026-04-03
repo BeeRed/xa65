@@ -41,6 +41,8 @@ char *cmd[] = {
 	"str$", "val", "asc", "chr$", "left$", "right$", "mid$", "go"
 };
 
+void usage(FILE *fp);
+
 void usage(FILE *fp)
 {
 	fprintf(fp,

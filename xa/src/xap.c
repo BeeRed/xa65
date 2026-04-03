@@ -58,6 +58,9 @@ static int pp_echo(char*),pp_if(char*),pp_print(char*),pp_prdef(char*);
 static int pp_ifldef(char*),pp_iflused(char*);
 static int pp_undef(char*);
 static int pp_error(char*);
+int pp_cpp(char *t);
+int icl_close(int *c);
+int rgetc(FILE *fp);
 
 #define   ANZBEF    14
 #define   VALBEF    7

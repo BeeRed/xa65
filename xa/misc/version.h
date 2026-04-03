@@ -20,6 +20,9 @@
 #define __XA65_VERSION_H__
 
 void version(const char *programname, const char *progversion,
+	     const char *authors, const char *copyright);
+
+void version(const char *programname, const char *progversion,
 	     const char *authors, const char *copyright)
 {
 	fprintf(stdout,

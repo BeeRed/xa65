@@ -68,6 +68,7 @@ int read_options(unsigned char *f);
 int read_undef(unsigned char *f);
 unsigned char *reloc_seg(unsigned char *f, int len, unsigned char *rtab, file65 *fp, int undefwarn);
 unsigned char *reloc_globals(unsigned char *, file65 *fp);
+void usage(FILE *fp);
 
 file65 file;
 unsigned char cmp[] = { 1, 0, 'o', '6', '5' };

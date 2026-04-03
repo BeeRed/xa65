@@ -24,6 +24,7 @@
 #include <string.h>
 
 #include "xah.h"         /*   structs        */
+#include "xam.h"         /*   protos         */
 
 static int ninc = 0;
 static char **nip = NULL;

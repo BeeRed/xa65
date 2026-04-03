@@ -36,6 +36,8 @@ FILE *fp;
 char name[100];
 char *s;
 
+void usage(FILE *fp);
+
 void usage(FILE *fp)
 {
 	fprintf(fp,

@@ -19,10 +19,10 @@
 #ifndef __XA65_XALISTING_H__
 #define __XA65_XALISTING_H__
 
-void list_start(char *formatname);	//either NULL or "html"
-void list_end();
+void list_start(const char *formatname);	//either NULL or "html"
+void list_end(void);
 
-void list_flush();			// debug helper
+void list_flush(void);			// debug helper
 
 void list_setfile(FILE *fp);
 void list_line(int l);          /* set line number for the coming listing output */

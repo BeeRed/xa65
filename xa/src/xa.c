@@ -91,7 +91,9 @@ static int align = 1;
 
 static void printstat(void);
 static void usage(int, FILE *);
+#ifdef _ENABLE_SETFEXT_     /* currently not used */
 static int setfext(char *, char *);
+#endif
 static int x_init(void);
 static int pass1(void);
 static int pass2(void);
@@ -649,6 +651,7 @@ int h_length(void) {
 }
 
 
+#ifdef _ENABLE_SETFEXT_     /* currently not used */
 static int setfext(char *s, char *ext)
 {
      int j,i=(int)strlen(s);
@@ -674,6 +677,7 @@ static int setfext(char *s, char *ext)
 
      return(0);
 }
+#endif
 
 
 static long ga_p1(void)

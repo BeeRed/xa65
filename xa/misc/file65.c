@@ -68,7 +68,9 @@ const char *cpunames[16] = {
 };
 
 int read_options(FILE *fp);
+void print_option(unsigned char *buf, int len);
 int print_labels(FILE *fp, int offset);
+void usage(FILE *fp);
 
 unsigned char hdr[BUF];
 unsigned char cmp[] = { 1, 0, 'o', '6', '5' };
@@ -79,6 +81,7 @@ int romoff = 0;
 int labels = 0;
 
 int verbose = 0;
+
 
 void usage(FILE *fp)
 {

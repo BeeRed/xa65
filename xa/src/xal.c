@@ -53,13 +53,15 @@ static int b_link(int);
 
 static int b_new(void);
 
-static void cll_init();
-static int cll_get();
-static void cll_clear();
-static int cll_getcur();
+static void cll_init(void);
+static int cll_get(void);
+static void cll_clear(void);
+static int cll_getcur(void);
 
+void l_addocc(int n, int *v, int *afl);
 
 static Labtab *ltp;
+
 
 int l_init(void)
 {
@@ -126,14 +128,14 @@ static int cll_current = 0;	/* the current cheap local labels block */
 /**
  * init the cheap local labels
  */
-void cll_init() {
+void cll_init(void) {
 	cll_current = 0;
 }
 
 /**
  * get the block number for a new cheap local label block
  */
-int cll_get() {
+int cll_get(void) {
 	if (cll_current == 0) {
 		cll_current = b_new();
 	}

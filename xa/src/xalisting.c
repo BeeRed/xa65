@@ -30,6 +30,7 @@
 #include "xah.h"
 #include "xal.h"
 #include "xat.h"
+#include "xalisting.h"	/* protos */
 
 
 /*********************************************************************************************/
@@ -58,6 +59,9 @@ static int list_word_f(char *buf, int outword, signed char format);
 static int list_byte(char *buf, int outbyte);
 static int list_byte_f(char *buf, int outbyte, signed char format);
 static int list_nibble_f(char *buf, int outnib, signed char format);
+
+void list_setbytes(int number_of_bytes_per_line);
+char *list_preamble(char *buf, int lineno, int seg, int pc);
 
 /*********************************************************************************************/
 
@@ -171,7 +175,7 @@ static formatter_t *formatp = &def_format;
 
 /*********************************************************************************************/
 
-void list_flush() {
+void list_flush(void) {
 	if (listfp != NULL) {
 		fflush(listfp);
 	}
@@ -189,7 +193,7 @@ void list_start(const char *formatname) {
 	}
 }
 
-void list_end() {
+void list_end(void) {
 	if (listfp != NULL) {
 		if (formatp->end_listing != NULL) formatp->end_listing();
 	}
