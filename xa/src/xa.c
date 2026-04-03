@@ -139,10 +139,6 @@ int main(int argc,char *argv[])
      char *lfile;	/* labels go here */
      char *ifile;
      
-     char old_e[MAXLINE];
-     char old_l[MAXLINE];
-     char old_o[MAXLINE];
-
      tim1=time(NULL);
     
      // note: unfortunately we do no full distinction between 65C02 and 65816.

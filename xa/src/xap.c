@@ -186,6 +186,7 @@ int pp_print(char *t)
 
 int pp_error(char *t)
 {
+	(void) t; /* warning: unused parameter t */
 	/* the offending line is printed for us */
 	return E_UERROR;
 }
@@ -1014,8 +1015,6 @@ int pgetline(char *t)
 {
      int c,er=E_OK;
      int rlen, tlen;
-     char *p = 0;
-     char *q = 0;
 
      loopfl =0; /* set if additional fetch needed */
 

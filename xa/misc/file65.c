@@ -273,6 +273,7 @@ void print_option(unsigned char *buf, int len) {
 int read_options(FILE *fp) {
 	int c, d, l=0;
 	unsigned char tb[256];
+	(void) d;   // avoid warning: variable 'd' set but not used
 
 	c=fgetc(fp); l++;
 	while(c && c!=EOF) {
