@@ -692,6 +692,8 @@ static int pass2(void)
      signed char *dataseg=NULL;
      signed char *datap=NULL;
 
+     memset(&datei, 0, sizeof(datei));	/* set everything to ZERO */
+
      memode=0;
      xmode=0;
      if((dataseg=malloc(dlen))) {
@@ -701,7 +703,7 @@ static int pass2(void)
        }
        datap=dataseg;
      }
-     filep=&datei;
+     filep=&datei;  // TODO: global var xap.c:filep point to func_local space!!!
      afile->mn.tmpe=0L;
 
      while((ner_max==0 || ner<ner_max) && afile->mn.tmpe<afile->mn.tmpz)
