@@ -985,7 +985,7 @@ int len_reloc_seg(unsigned char *buf, int ri) {
 
 unsigned char *reloc_globals(unsigned char *buf, file65 *fp) {
 	int n, old, new, seg;
-	char *name;
+	unsigned char *name;
 
 	n = buf[0] + 256*buf[1];
 	buf +=2;

@@ -234,7 +234,7 @@ int main(int argc, char *argv[]) {
 	    file.fsize=fs.st_size;
 	    file.buf=malloc(file.fsize);
 	    if(!file.buf) {
-	      fprintf(stderr,"Oops, no more memory! (%d)\n", file.fsize);
+	      fprintf(stderr,"Oops, no more memory! (%lu)\n", file.fsize);
 	      exit(1);
 	    }
 	    printf("reloc65: read file %s -> %s\n",argv[i],outfile);
